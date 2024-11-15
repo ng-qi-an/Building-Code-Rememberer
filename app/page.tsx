@@ -25,7 +25,7 @@ export default function Home(){
       <h1 className="text-3xl font-bold mt-6">Your Entries</h1>
       <Input placeholder="Search for an entry" className="mt-3 border-none bg-black/5 dark:bg-white/5 text-sm h-[35px] px-4"/>
     </div>
-    {entries.map((entry)=>{
+    {entries.toSorted((a, b)=> Number(b.createdOn) - Number(a.createdOn)).map((entry)=>{
       return <Entry data={entry} key={entry.id}/>
     })}
     <ScannerDialog open={open} setOpen={setOpen} onCompleted={(result:IDetectedBarcode[])=>{
