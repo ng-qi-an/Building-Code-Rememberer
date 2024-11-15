@@ -38,6 +38,7 @@ export default function Home(){
           format: result[0].format
         });
         setOpen(false);
+        setEntries(await EntryManager.getAll())
       })()
     }}/>
     <Button onClick={()=> setOpen(true)} className="fixed bottom-8 right-6 rounded-full h-[60px] w-[60px]" size="icon">
