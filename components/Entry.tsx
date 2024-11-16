@@ -32,8 +32,8 @@ export default function Entry({data}:{data: EntryFormat}){
                     <DrawerTitle>{data.name}</DrawerTitle>
                     <DrawerDescription>Created on {new Date(Number(data.createdOn)).toLocaleString()}</DrawerDescription>
                 </DrawerHeader>
-                <div className="h-[300px] flex items-center justify-center">
-                    <QRCode value={data.data} size={256} />
+                <div className="h-[200px] flex items-center justify-center">
+                    <QRCode value={data.data} size={175} />
                 </div>
                 <DrawerFooter>
                     <DrawerClose>
